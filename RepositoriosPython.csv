@@ -1,40 +1,45 @@
-Nome/Dono;	URL;	Linguagem Primária;	Nº de Estrelas;	Nº de Watchers;	Nº de Forks;	Nº de Releases;	Data de Criação;
-python/mypy;	https://github.com/python/mypy;	Python;	8069;	176;	1220;	0;	2012-12-07T13:30:23Z;
-gvanrossum/500lines;	https://github.com/gvanrossum/500lines;	Python;	208;	13;	35;	0;	2014-02-25T15:52:58Z;
-gvanrossum/ballot-box;	https://github.com/gvanrossum/ballot-box;	Python;	8;	2;	4;	0;	2015-03-13T23:41:12Z;
-bbcmicrobit/micropython;	https://github.com/bbcmicrobit/micropython;	C;	444;	67;	247;	2;	2015-08-07T11:58:53Z;
-gvanrossum/asyncio;	https://github.com/gvanrossum/asyncio;	Python;	9;	1;	2;	0;	2015-09-25T16:14:09Z;
-fake-python/cpython;	https://github.com/fake-python/cpython;	Python;	3;	1;	0;	6;	2015-11-05T12:07:26Z;
-gvanrossum/pyxl3;	https://github.com/gvanrossum/pyxl3;	Python;	107;	12;	13;	0;	2016-01-15T19:07:08Z;
-edreamleo/make-stub-files;	https://github.com/edreamleo/make-stub-files;	Python;	20;	3;	3;	0;	2016-01-26T16:54:22Z;
-python/typed_ast;	https://github.com/python/typed_ast;	C;	152;	18;	38;	0;	2016-02-16T22:40:09Z;
-JukkaL/mypy-website;	https://github.com/JukkaL/mypy-website;	HTML;	10;	7;	4;	0;	2016-03-11T16:02:25Z;
-gvanrossum/path-pep;	https://github.com/gvanrossum/path-pep;	C;	2;	1;	0;	0;	2016-05-12T16:37:52Z;
-gvanrossum/Pyjion;	https://github.com/gvanrossum/Pyjion;	C++;	6;	3;	1;	0;	2016-06-05T03:47:37Z;
-ilevkivskyi/peps;	https://github.com/ilevkivskyi/peps;	Python;	0;	5;	0;	0;	2016-07-14T07:53:04Z;
-phouse512/peps;	https://github.com/phouse512/peps;	Python;	5;	2;	4;	0;	2016-08-09T17:53:45Z;
-python/overload-sig;	https://github.com/python/overload-sig;	null;	2;	13;	2;	0;	2016-08-17T14:22:49Z;
-ilevkivskyi/com2ann;	https://github.com/ilevkivskyi/com2ann;	Python;	50;	6;	1;	0;	2016-09-09T07:17:02Z;
-gvanrossum/gvanrossum.github.io;	https://github.com/gvanrossum/gvanrossum.github.io;	HTML;	41;	2;	6;	0;	2016-09-09T22:54:11Z;
-gvanrossum/pytype;	https://github.com/gvanrossum/pytype;	Python;	4;	1;	1;	0;	2017-02-10T14:58:59Z;
-gvanrossum/arq;	https://github.com/gvanrossum/arq;	Python;	3;	1;	1;	0;	2017-02-17T20:18:51Z;
-emilyemorehouse/cpython;	https://github.com/emilyemorehouse/cpython;	Python;	0;	2;	1;	0;	2017-02-20T16:37:24Z;
-neogeny/TatSu;	https://github.com/neogeny/TatSu;	Python;	146;	13;	34;	13;	2017-05-02T02:58:58Z;
-gvanrossum/pythonlabs;	https://github.com/gvanrossum/pythonlabs;	HTML;	16;	2;	0;	0;	2017-06-04T05:00:26Z;
-gvanrossum/mypy;	https://github.com/gvanrossum/mypy;	Python;	15;	4;	5;	0;	2017-06-06T21:04:01Z;
-gvanrossum/mypy-dummy;	https://github.com/gvanrossum/mypy-dummy;	Python;	6;	2;	0;	0;	2017-08-31T16:42:53Z;
-gvanrossum/pep550;	https://github.com/gvanrossum/pep550;	Python;	7;	3;	1;	0;	2017-09-05T21:59:49Z;
-gvanrossum/welcome-wagon-2018;	https://github.com/gvanrossum/welcome-wagon-2018;	Python;	2;	1;	0;	0;	2018-01-24T00:46:13Z;
-gvanrossum/cpython;	https://github.com/gvanrossum/cpython;	Python;	59;	6;	3;	0;	2018-07-17T18:01:14Z;
-gvanrossum/mirror-cwi-stdwin;	https://github.com/gvanrossum/mirror-cwi-stdwin;	C;	2;	1;	0;	0;	2018-09-29T05:00:49Z;
-mypyc/mypy_mypyc-wheels;	https://github.com/mypyc/mypy_mypyc-wheels;	Shell;	4;	2;	0;	1144;	2018-10-10T20:02:06Z;
-gvanrossum/memcached;	https://github.com/gvanrossum/memcached;	C;	4;	1;	0;	0;	2018-12-23T23:53:16Z;
-gvanrossum/python-memcached;	https://github.com/gvanrossum/python-memcached;	Python;	5;	1;	0;	0;	2018-12-24T19:40:55Z;
-python/mypy_extensions;	https://github.com/python/mypy_extensions;	Python;	68;	13;	12;	0;	2019-01-14T23:37:26Z;
-gvanrossum/stone;	https://github.com/gvanrossum/stone;	Python;	3;	1;	1;	0;	2019-03-08T19:15:25Z;
-neogeny/pygl;	https://github.com/neogeny/pygl;	Python;	3;	2;	0;	0;	2019-04-27T10:47:30Z;
-gvanrossum/pegen;	https://github.com/gvanrossum/pegen;	Python;	145;	17;	19;	0;	2019-05-07T16:43:15Z;
-gvanrossum/PackCC;	https://github.com/gvanrossum/PackCC;	C;	3;	0;	1;	0;	2019-05-30T14:40:05Z;
-gvanrossum/ctok;	https://github.com/gvanrossum/ctok;	C;	51;	3;	5;	0;	2019-06-22T03:38:29Z;
-willingc/test-581;	https://github.com/willingc/test-581;	null;	2;	2;	0;	0;	2019-06-28T18:52:53Z;
-gvanrossum/guidos_time_machine;	https://github.com/gvanrossum/guidos_time_machine;	Python;	49;	10;	2;	0;	2020-03-05T04:06:18Z;
+Nome/Dono;"	URL";"	Linguagem Primária";"	Nº de Estrelas";"	Nº de Watchers";"	Nº de Forks";"	Nº de Releases";"	Data de Criação"
+python/mypy;"	https://github.com/python/mypy";"	Python";"	8067";"	176";"	1221";"	0";"	2012-12-07T13:30:23Z"
+gvanrossum/500lines;"	https://github.com/gvanrossum/500lines";"	Python";"	208";"	13";"	35";"	0";"	2014-02-25T15:52:58Z"
+gvanrossum/ballot-box;"	https://github.com/gvanrossum/ballot-box";"	Python";"	8";"	2";"	4";"	0";"	2015-03-13T23:41:12Z"
+bbcmicrobit/micropython;"	https://github.com/bbcmicrobit/micropython";"	C";"	444";"	67";"	247";"	2";"	2015-08-07T11:58:53Z"
+gvanrossum/asyncio;"	https://github.com/gvanrossum/asyncio";"	Python";"	9";"	1";"	2";"	0";"	2015-09-25T16:14:09Z"
+fake-python/cpython;"	https://github.com/fake-python/cpython";"	Python";"	3";"	1";"	0";"	6";"	2015-11-05T12:07:26Z"
+gvanrossum/pyxl3;"	https://github.com/gvanrossum/pyxl3";"	Python";"	107";"	12";"	13";"	0";"	2016-01-15T19:07:08Z"
+edreamleo/make-stub-files;"	https://github.com/edreamleo/make-stub-files";"	Python";"	20";"	3";"	3";"	0";"	2016-01-26T16:54:22Z"
+python/typed_ast;"	https://github.com/python/typed_ast";"	C";"	152";"	18";"	38";"	0";"	2016-02-16T22:40:09Z"
+JukkaL/mypy-website;"	https://github.com/JukkaL/mypy-website";"	HTML";"	10";"	7";"	4";"	0";"	2016-03-11T16:02:25Z"
+gvanrossum/path-pep;"	https://github.com/gvanrossum/path-pep";"	C";"	2";"	1";"	0";"	0";"	2016-05-12T16:37:52Z"
+gvanrossum/Pyjion;"	https://github.com/gvanrossum/Pyjion";"	C++";"	6";"	3";"	1";"	0";"	2016-06-05T03:47:37Z"
+ilevkivskyi/peps;"	https://github.com/ilevkivskyi/peps";"	Python";"	0";"	5";"	0";"	0";"	2016-07-14T07:53:04Z"
+phouse512/peps;"	https://github.com/phouse512/peps";"	Python";"	5";"	2";"	4";"	0";"	2016-08-09T17:53:45Z"
+python/overload-sig;"	https://github.com/python/overload-sig";"	null";"	2";"	13";"	2";"	0";"	2016-08-17T14:22:49Z"
+ilevkivskyi/com2ann;"	https://github.com/ilevkivskyi/com2ann";"	Python";"	50";"	6";"	1";"	0";"	2016-09-09T07:17:02Z"
+gvanrossum/gvanrossum.github.io;"	https://github.com/gvanrossum/gvanrossum.github.io";"	HTML";"	41";"	2";"	6";"	0";"	2016-09-09T22:54:11Z"
+gvanrossum/pytype;"	https://github.com/gvanrossum/pytype";"	Python";"	4";"	1";"	1";"	0";"	2017-02-10T14:58:59Z"
+gvanrossum/arq;"	https://github.com/gvanrossum/arq";"	Python";"	3";"	1";"	1";"	0";"	2017-02-17T20:18:51Z"
+emilyemorehouse/cpython;"	https://github.com/emilyemorehouse/cpython";"	Python";"	0";"	2";"	1";"	0";"	2017-02-20T16:37:24Z"
+neogeny/TatSu;"	https://github.com/neogeny/TatSu";"	Python";"	146";"	13";"	34";"	13";"	2017-05-02T02:58:58Z"
+gvanrossum/pythonlabs;"	https://github.com/gvanrossum/pythonlabs";"	HTML";"	16";"	2";"	0";"	0";"	2017-06-04T05:00:26Z"
+gvanrossum/mypy;"	https://github.com/gvanrossum/mypy";"	Python";"	15";"	4";"	5";"	0";"	2017-06-06T21:04:01Z"
+gvanrossum/mypy-dummy;"	https://github.com/gvanrossum/mypy-dummy";"	Python";"	6";"	2";"	0";"	0";"	2017-08-31T16:42:53Z"
+gvanrossum/pep550;"	https://github.com/gvanrossum/pep550";"	Python";"	7";"	3";"	1";"	0";"	2017-09-05T21:59:49Z"
+gvanrossum/welcome-wagon-2018;"	https://github.com/gvanrossum/welcome-wagon-2018";"	Python";"	2";"	1";"	0";"	0";"	2018-01-24T00:46:13Z"
+gvanrossum/cpython;"	https://github.com/gvanrossum/cpython";"	Python";"	59";"	6";"	3";"	0";"	2018-07-17T18:01:14Z"
+gvanrossum/mirror-cwi-stdwin;"	https://github.com/gvanrossum/mirror-cwi-stdwin";"	C";"	2";"	1";"	0";"	0";"	2018-09-29T05:00:49Z"
+mypyc/mypy_mypyc-wheels;"	https://github.com/mypyc/mypy_mypyc-wheels";"	Shell";"	4";"	2";"	0";"	1147";"	2018-10-10T20:02:06Z"
+gvanrossum/memcached;"	https://github.com/gvanrossum/memcached";"	C";"	4";"	1";"	0";"	0";"	2018-12-23T23:53:16Z"
+gvanrossum/python-memcached;"	https://github.com/gvanrossum/python-memcached";"	Python";"	5";"	1";"	0";"	0";"	2018-12-24T19:40:55Z"
+python/mypy_extensions;"	https://github.com/python/mypy_extensions";"	Python";"	68";"	13";"	12";"	0";"	2019-01-14T23:37:26Z"
+gvanrossum/stone;"	https://github.com/gvanrossum/stone";"	Python";"	3";"	1";"	1";"	0";"	2019-03-08T19:15:25Z"
+neogeny/pygl;"	https://github.com/neogeny/pygl";"	Python";"	3";"	2";"	0";"	0";"	2019-04-27T10:47:30Z"
+gvanrossum/pegen;"	https://github.com/gvanrossum/pegen";"	Python";"	145";"	17";"	19";"	0";"	2019-05-07T16:43:15Z"
+gvanrossum/PackCC;"	https://github.com/gvanrossum/PackCC";"	C";"	3";"	0";"	1";"	0";"	2019-05-30T14:40:05Z"
+gvanrossum/ctok;"	https://github.com/gvanrossum/ctok";"	C";"	51";"	3";"	5";"	0";"	2019-06-22T03:38:29Z"
+willingc/test-581;"	https://github.com/willingc/test-581";"	null";"	2";"	2";"	0";"	0";"	2019-06-28T18:52:53Z"
+gvanrossum/guidos_time_machine;"	https://github.com/gvanrossum/guidos_time_machine";"	Python";"	49";"	10";"	2";"	0";"	2020-03-05T04:06:18Z"
+;;;;;;;
+Baseline;;;;;;;
+Popularidade;;;Tamanho;Atividade;;Maturidade;
+Nº de Estrelas;Nº de Watchers;Nº de Forks;LOC;Nº de Releases;Releases/Dias;Idade (em anos);
+8;3;2;3972;0;0;3;
