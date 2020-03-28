@@ -4,6 +4,7 @@ import csv
 
 headers = {"Authorization": "token ######"}
 
+initial = "null"
 results = [] #vetor de resultados
 
 def run_query(query):
@@ -17,7 +18,7 @@ def run_query(query):
         raise Exception("Query falhou! Codigo de retorno: {}. {}".format(request.status_code, query))
 
 def createCsv(nodes):
-  with open("/Lab_6_EX2/RepositoriosGuido.csv", 'w', newline='') as n_file:
+  with open("/Lab_6_EX2/RepositoriosPython.csv", 'w', newline='') as n_file:
 
     fnames = [
         'Nome/Dono;',
@@ -43,44 +44,48 @@ def createCsv(nodes):
                 'Nº de Releases;': "{};".format(node['releases']['totalCount']),
                 'Data de Criação;': "{};".format(node['createdAt'])
             })
-   
-query = """
-{
-  user(login:"gvanrossum"){
-    repositories(first:39){
-      nodes{
-        ... on Repository
+
+for x in range(50):   
+  query = """
+  {
+    search(query:"stars:>100 language:Python", type:REPOSITORY, first:20, after:%s){
+        nodes{
+          ... on Repository
+          {
+            nameWithOwner
+            url
+            primaryLanguage
+            {
+              name
+            }
+            stargazers
+            {
+              totalCount
+            }
+            watchers
+            {
+              totalCount
+            }
+            forkCount
+            releases
+            {
+              totalCount
+            }
+            createdAt
+          }
+        }
+        pageInfo
         {
-          nameWithOwner
-          url
-          primaryLanguage
-          {
-            name
-          }
-          stargazers
-          {
-            totalCount
-          }
-          watchers
-          {
-            totalCount
-          }
-          forkCount
-          releases
-          {
-            totalCount
-          }
-          createdAt
+          endCursor
         }
       }
-    }
   }
-}
-"""
+  """ % (initial)
 
-result = run_query(query)
-for y in range(39):
-  results.append(result["data"]["user"]["repositories"]["nodes"][y])
+  result = run_query(query)
+  for y in range(20):
+    results.append(result["data"]["search"]["nodes"][y])
+  initial = '"{}"'.format(result["data"]["search"]["pageInfo"]["endCursor"])
 
 print('Dados obtidos com sucesso')
 createCsv(results)
