@@ -1,10 +1,10 @@
+import os.path
+from os import path
 import csv
-from radon.cli.harvest import RawHarvester
-from radon.cli import Config
-from pygit2 import clone_repository
+import subprocess
 
 def createCsv(urls,locs):
-  with open("/Lab_6_EX2/RepositoriosPythonLOC.csv", 'w', newline='') as n_file:
+  with open("/Lab_6_EX2/PopPython/RepositoriosPythonLOCDaniel.csv", 'w', newline='') as n_file:
 
     fnames = [
         'URL;',
@@ -13,18 +13,31 @@ def createCsv(urls,locs):
 
     csv_writer = csv.DictWriter(n_file, fieldnames=fnames, dialect="excel-tab")
     csv_writer.writeheader()
-    for y in range(size):
+    for y in range(len(urls)):
         csv_writer.writerow(
             {
                 'URL;': "{};".format(urls[y]),
                 'LOC;': "{};".format(locs[y])
             })
 
+def getTotal(result):
+    index = 0
+    total = ""
+    ch = result[index]
+    while ch == " ":
+        index += 1
+        ch = result[index]
+    while ch != " ":
+        total += ch
+        index += 1
+        ch = result[index]
+    return total
+    
 size = 500
 
-loc = 0
-
 locs = []
+
+urls_repo = []
 
 urls = [
     'https://github.com/donnemartin/system-design-primer',
@@ -233,7 +246,6 @@ urls = [
     'https://github.com/gleitz/howdoi',
     'https://github.com/MorvanZhou/tutorials',
     'https://github.com/threat9/routersploit',
-    'https://github.com/eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee/eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee',
     'https://github.com/s0md3v/XSStrike',
     'https://github.com/eliangcs/http-prompt',
     'https://github.com/coursera-dl/coursera-dl',
@@ -526,26 +538,26 @@ urls = [
     'https://github.com/lbryio/lbry-sdk',
     'https://github.com/SpiderClub/haipproxy',
     'https://github.com/wkentaro/labelme',
-    'https://github.com/Yelp/dumb-init'
+    'https://github.com/Yelp/dumb-init',
+    'https://github.com/buildbot/buildbot'
 ]
 
 for x in range(size):
-    repo_url = urls[x]
     repo_path = '/Repos/{}'.format(x)
-    repo = clone_repository(repo_url, repo_path)
-    config = Config(
-        exclude='',
-        ignore='.*'
-    )
-    rad = RawHarvester([repo_path],config).results
-    file = next(rad,None)
-    while file != None:
-        if 'loc' in file[1]:
-            loc += int(file[1]["loc"])
-        file = next(rad,None)
-    locs.append(str(loc))
-    loc = 0
+    if path.exists(repo_path):
+        try:
+            sbprs = subprocess.Popen("pygount {} --format=summary".format(repo_path),stdout=subprocess.PIPE)
+            result = str(sbprs.stdout.read())
+            results = result.split("total")
+            loc = getTotal(results[1])
+            locs.append(loc)
+            urls_repo.append(urls[x])
+            print("Repositorio {} deu bom!".format(x))
+        except:
+            locs.append(str(0))
+            urls_repo.append(urls[x])
+            print("Repositorio {} deu ruim!".format(x))
+            continue
 
-print('Repositorios clonados com sucesso')
-createCsv(urls,locs)
+createCsv(urls_repo,locs)
 print('Repositorios analisados com sucesso')

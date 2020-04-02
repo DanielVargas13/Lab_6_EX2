@@ -1,33 +1,8 @@
-import csv
-from radon.cli.harvest import RawHarvester
-from radon.cli import Config
-from pygit2 import clone_repository
-
-def createCsv(urls,locs):
-  with open("/Lab_6_EX2/RepositoriosPythonLOC2.csv", 'w', newline='') as n_file:
-
-    fnames = [
-        'URL;',
-        'LOC;'
-    ]
-
-    csv_writer = csv.DictWriter(n_file, fieldnames=fnames, dialect="excel-tab")
-    csv_writer.writeheader()
-    for y in range(size):
-        csv_writer.writerow(
-            {
-                'URL;': "{};".format(urls[y]),
-                'LOC;': "{};".format(locs[y])
-            })
+from git import Repo
 
 size = 500
 
-loc = 0
-
-locs = []
-
 urls = [
-    'https://github.com/buildbot/buildbot',
     'https://github.com/PaddlePaddle/models',
     'https://github.com/davidhalter/jedi',
     'https://github.com/sshwsfc/xadmin',
@@ -74,7 +49,6 @@ urls = [
     'https://github.com/paralax/awesome-honeypots',
     'https://github.com/cloudtools/troposphere',
     'https://github.com/cloudera/hue',
-    'https://github.com/reorx/httpstat',
     'https://github.com/alicevision/meshroom',
     'https://github.com/stephenmcd/mezzanine',
     'https://github.com/persepolisdm/persepolis',
@@ -273,7 +247,6 @@ urls = [
     'https://github.com/Tribler/tribler',
     'https://github.com/jpadilla/pyjwt',
     'https://github.com/gnemoug/distribute_crawler',
-    'https://github.com/googleapis/google-cloud-python',
     'https://github.com/MrGemy95/Tensorflow-Project-Template',
     'https://github.com/lutris/lutris',
     'https://github.com/santinic/pampy',
@@ -324,7 +297,6 @@ urls = [
     'https://github.com/christabor/flask_jsondash',
     'https://github.com/jackzhenguo/python-small-examples',
     'https://github.com/wistbean/learn_python3_spider',
-    'https://github.com/lyst/lightfm',
     'https://github.com/DanMcInerney/wifijammer',
     'https://github.com/skorch-dev/skorch',
     'https://github.com/python-attrs/attrs',
@@ -526,26 +498,20 @@ urls = [
     'https://github.com/facebookresearch/pytorch3d',
     'https://github.com/django-guardian/django-guardian',
     'https://github.com/cysmith/neural-style-tf',
-    'https://github.com/LionSec/katoolin'
+    'https://github.com/LionSec/katoolin',
+    'https://github.com/dedupeio/dedupe',
+    'https://github.com/x0rz/tweets_analyzer',
+    'https://github.com/jisungk/deepjazz',
+    'https://github.com/google/nogotofail'
 ]
 
 for x in range(size):
-    repo_url = urls[x]
-    repo_path = '/Repos/{}'.format(x)
-    repo = clone_repository(repo_url, repo_path)
-    config = Config(
-        exclude='',
-        ignore='.*'
-    )
-    rad = RawHarvester([repo_path],config).results
-    file = next(rad,None)
-    while file != None:
-        if 'loc' in file[1]:
-            loc += int(file[1]["loc"])
-        file = next(rad,None)
-    locs.append(str(loc))
-    loc = 0
+    try:
+        repo_url = urls[x]
+        repo_path = '/Repos/{}'.format(x)
+        Repo.clone_from(repo_url, repo_path)
+    except:
+        print("Repositórios {} não foi clonado".format(x))
+        continue
 
 print('Repositorios clonados com sucesso')
-createCsv(urls,locs)
-print('Repositorios analisados com sucesso')
